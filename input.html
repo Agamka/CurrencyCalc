@@ -1,0 +1,50 @@
+<head>
+    <meta charset="utf-8">
+    <title>Currency calculator</title>
+    
+</head>
+<body>
+  
+    <div class="container">
+    <h1>Currency calculator</h1>
+    <div id="tester">
+      <button>Pobierz aktualnie obowiązujący kurs średni waluty USD</button>
+      <p></p>
+      </div>
+    <form>
+    <div>
+      <input type="number" id="amount" min="0">
+    </div>
+    <div>
+      <select id="currency" required>
+        <option>USD</option>
+        <option>EUR</option>
+        <option>PLN</option>
+      </select>
+  </div>
+  <div>
+      <p>Convert to</p>
+      <select id="currency-2" required>
+        <option >USD</option>
+        <option >EUR</option>
+        <option >PLN</option>
+      </select>
+  </div>
+      <button id="btn">Show me the result!</button>
+  </form>
+    
+  <div class="result">
+    <p>
+      <span id="number"></span>
+      <span id="curr"></span>
+      <span id="result"></span>
+      <span id="curr-2"></span>
+    </p>
+  </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="currency-calculator.js"></script>
+  
+</body>
+
+   
