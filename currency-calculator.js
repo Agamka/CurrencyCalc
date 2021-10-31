@@ -4,11 +4,21 @@ document.querySelector('#tester button').addEventListener('click', function() {
       var res, kursy;
       if(ajax.readyState === 4 && ajax.status === 200) {
         res = JSON.parse(this.responseText);
-        kursy = res.rates[0].effectiveDate+': '+res.rates[0].mid;
-        document.querySelector('#tester p').innerHTML = kursy;
+        //kursy = res[0].rates[0].currency+': '+res[0].rates[0].mid;
+        let x = "";
+        let y = "";
+        let z = "";
+          for (i in res[0].rates) 
+            {
+              x += res[0].rates[i].currency+ " " + res[0].rates[i].code+ " " + res[0].rates[i].mid+ "</br>";
+              console.log(x);
+            }
+        //kursy = res.rates[0].effectiveDate+': '+res.rates[0].mid;
+        document.querySelector('#tester p').innerHTML = x;
       }
     };
-    ajax.open("GET", "http://api.nbp.pl/api/exchangerates/rates/a/usd/", true);
+    ajax.open("GET", "http://api.nbp.pl/api/exchangerates/tables/a/?format=json", true);
+    //ajax.open("GET", "http://api.nbp.pl/api/exchangerates/rates/a/usd/?format=json", true);
     ajax.send();
   });
   //ajax.send();
