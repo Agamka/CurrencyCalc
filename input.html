@@ -1,32 +1,20 @@
 <head>
     <meta charset="utf-8">
     <title>Currency calculator</title>
-    
 </head>
 <body>
-  
     <div class="container">
     <h1>Currency calculator</h1>
-   <div id="tester">
-     <h2>Current average exchange rates to PLN</h2>
-     <!-- <button>Show the current average exchange rates to PLN</button>-->
-      <p></p>
-      </div>
+     
     <form>
     <div>
-      <input type="number" id="amount" min="0">
+      <input type="number" id="amount" min="1">
     </div>
     <div>
       <select id="currency" required>
       </select>
   </div>
-  <div>
-      <p>Convert to</p>
-      <select id="currency-2" required>
-        <option>PLN</option>
-      </select>
-  </div>
-      <button id="btn">Show me the result!</button>
+      <button id="btn">Convert to PLN</button>
   </form>
     
   <div class="result">
@@ -36,10 +24,59 @@
       <span id="result"></span>
       <span id="curr-2"></span>
     </p>
+
   </div>
+  <div class="exchange_rate">
+    <p>
+      <span id="curr_to_exchange_1"></span>
+      <span id="exchange_1"></span>
+      <span id="amou_1"></span>
+      <span id="curr_to_1"></span>
+    </p>
 </div>
+  <!--<div id="tester">
+     <h2>Current average exchange rates to PLN</h2>
+    <button id="btn_1">Show the current average exchange rates to PLN</button>
+     <p></p>
+   </div>-->
+  <form>
+    <div>
+      <input type="number" id="amountPLN" min="1">
+    </div>
+   
+  <div >
+    <select id="currency_2" required>
+    </select>
+  </div>
+      <button id="btn-from">Convert from PLN</button>
+  </form>
+
+  <div class="result">
+    <p>
+      <span id="number-1"></span>
+      <span id="result-1"></span>
+      <span id="curr-1"></span>
+    </p>
+  </div>
+  <div class="exchange_rate">
+      <p>
+        <span id="amou"></span>
+        <span id="curr_to_exchange"></span>
+        <span id="exchange"></span>
+        <span id="curr_to"></span>
+      </p>
+  </div>
+
+ <!--  <div id="tester-2">
+     <h2>Current average exchange rates from PLN to another currencies</h2>
+    <button id="button">Show the current average exchange rates to PLN</button>
+     <p></p>
+  </div>-->
+
+</div>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script language="javascript" type="text/javascript" src="currency-calculator.js"></script>
+<script language="javascript" type="text/javascript" src="currency-calculator.js"></script>
   
 </body>
 
